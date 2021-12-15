@@ -1,0 +1,6 @@
+10:08:03.110 [TestNG-test=Test-1] INFO  SeleniumJavaFramework.ReachHealthTests - Driver is initialized
+10:08:03.279 [TestNG-test=Test-2] INFO  SeleniumJavaFramework.ReachHealthTests - Driver is initialized
+10:08:11.259 [TestNG-test=Test-2] INFO  SeleniumJavaFramework.ReachHealthTests - clicked on Sign In
+10:29:28.593 [main] INFO  SeleniumJavaFramework.ReachHealthTests - Driver is initialized
+10:29:35.339 [main] INFO  SeleniumJavaFramework.ReachHealthTests - Incorrect email or password
+10:29:38.387 [main] INFO  SeleniumJavaFramework.ReachHealthTests - Driver is initialized
