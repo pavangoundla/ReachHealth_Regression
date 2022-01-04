@@ -20,5 +20,9 @@ public WebDriver driver;
 		return driver.findElement(HELLO_USERTEXT);
 	}
 	
+	public String getDashboardPageURL() {
+		return driver.getCurrentUrl();
+	}
+	
 
 }

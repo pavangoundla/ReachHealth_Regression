@@ -5,8 +5,8 @@
     <classes>
       <class name="SeleniumJavaFramework.ReachHealthTests">
         <methods>
-          <include name="loginToReachHealthWithValidCredentials" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="validateAllPageTabs" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- SeleniumJavaFramework.ReachHealthTests -->
