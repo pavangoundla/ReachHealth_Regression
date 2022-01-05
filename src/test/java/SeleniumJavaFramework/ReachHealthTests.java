@@ -175,37 +175,34 @@ public class ReachHealthTests extends BaseClass {
 
 		Assert.assertEquals(helloUserText, "Hello pavan!", "Message displayed");
 
+		// Verifies the Dashboard page URL
 		String dashboardPageURL = dashboardPage.getDashboardPageURL();
-
 		Assert.assertEquals(dashboardPageURL, "https://demo.reachhealth.io/#/dashboard");
+
+		// Navigates and Verifies the Assessment page URL
 		AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
-
 		assessmentsPage.clickOnAssessmentsTab();
-
 		String assessmentPageURL = assessmentsPage.getAssessmentsPageURL();
 		Assert.assertEquals(assessmentPageURL, "https://demo.reachhealth.io/#/assessments");
 
+		// Navigates and Verifies the Goals page URL
 		GoalsPage goalsPage = new GoalsPage(driver);
-
 		goalsPage.clickOnGoalsTab();
-
 		String goalsPageURL = goalsPage.getGoalsPageURL();
 		Assert.assertEquals(goalsPageURL, "https://demo.reachhealth.io/#/goals");
 
+		// Navigates and Verifies the Activity page URL
 		ActivityPage activityPage = new ActivityPage(driver);
-
 		activityPage.clickOnActivityTab();
-
 		String activityPageURL = activityPage.getActivityPageURL();
 		Assert.assertEquals(activityPageURL, "https://demo.reachhealth.io/#/activity");
-		
+
+		// Navigates and Verifies the Resources page URL
 		ResourcesPage resourcesPage = new ResourcesPage(driver);
-
 		resourcesPage.clickOnResourcesTab();
-
 		String resourcesPageURL = resourcesPage.getResourcesPageURL();
 		Assert.assertEquals(resourcesPageURL, "https://demo.reachhealth.io/#/resources");
-		
+
 	}
 
 	@AfterMethod
