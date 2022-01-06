@@ -3,10 +3,11 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ResourcesPage {
+import PageLocators.ResourcesPageLocators;
+
+public class ResourcesPage implements ResourcesPageLocators{
 public WebDriver driver;
 	
-	By RESOURCES_TAB = By.cssSelector("a[href='#/resources']");
 	
 	public ResourcesPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

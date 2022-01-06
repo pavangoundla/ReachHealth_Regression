@@ -3,10 +3,10 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ActivityPage {
+import PageLocators.ActivityPageLocators;
+
+public class ActivityPage implements ActivityPageLocators{
 public WebDriver driver;
-	
-	By ACTIVITY_TAB = By.cssSelector("a[href='#/activity']");
 	
 	public ActivityPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

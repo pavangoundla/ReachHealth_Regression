@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DashboardPage {
+import PageLocators.DashboardPageLocators;
+
+public class DashboardPage implements DashboardPageLocators{
 	
 public WebDriver driver;
 	
-	
-	By HELLO_USERTEXT = By.xpath("//h1[contains(text(),'Hello pavan!')]");
 	
 	public DashboardPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

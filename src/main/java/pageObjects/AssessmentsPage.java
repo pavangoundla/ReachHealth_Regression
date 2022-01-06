@@ -3,11 +3,11 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AssessmentsPage {
+import PageLocators.AssessmentsPageLocators;
+
+public class AssessmentsPage implements AssessmentsPageLocators{
 
 	public WebDriver driver;
-	
-	By ASSESSMENTS_TAB = By.cssSelector("a[href='#/assessments']");
 	
 	public AssessmentsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

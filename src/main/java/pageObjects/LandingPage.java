@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LandingPage {
+import PageLocators.LandingPageLocators;
+
+public class LandingPage implements LandingPageLocators{
 	
 	public WebDriver driver;
 	
-	
-	By SIGN_IN = By.cssSelector("a[href*='login']");
-	By HEALTHIEST_POSSIBLE_TITLE = By.cssSelector("h1[data-testid='title']");
 	
 	public LandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

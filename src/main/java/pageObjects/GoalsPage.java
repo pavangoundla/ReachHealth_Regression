@@ -3,10 +3,10 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class GoalsPage {
+import PageLocators.GoalsPageLocators;
+
+public class GoalsPage implements GoalsPageLocators{
 public WebDriver driver;
-	
-	By GOALS_TAB = By.cssSelector("a[href='#/goals']");
 	
 	public GoalsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
