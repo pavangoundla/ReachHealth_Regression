@@ -27,14 +27,15 @@ public class BaseClass {
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
-
+		String currentDirectory = System.getProperty("user.dir");
 		if (browserName.equals("chrome")) {
+		
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\pavan.goundla\\ThePrincipleOfChange\\chromedriver_win32 (4)\\chromedriver.exe");
+					currentDirectory+"\\src\\main\\java\\resources\\chromedriver_win32 (5)\\chromedriver.exe");
 			 driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\pavan.goundla\\ThePrincipleOfChange\\geckodriver-v0.29.1-win64\\geckodriver.exe");
+					currentDirectory+"src\\main\\java\\resources\\geckodriver-v0.29.1-win64\\geckodriver.exe");
 			 driver = new FirefoxDriver();
 		}
 
