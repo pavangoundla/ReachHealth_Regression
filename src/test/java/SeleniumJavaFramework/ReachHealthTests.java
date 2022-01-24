@@ -203,6 +203,10 @@ public class ReachHealthTests extends BaseClass {
 		String resourcesPageURL = resourcesPage.getResourcesPageURL();
 		Assert.assertEquals(resourcesPageURL, "https://demo.reachhealth.io/#/resources");
 
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.mouseHoverOnUserIcon();
+		
+		Thread.sleep(8000);
 	}
 
 	@AfterMethod

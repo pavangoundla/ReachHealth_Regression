@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\pavan.goundla\AppData\Local\Temp\testng-eclipse-152217041\testng-customsuite.xml</span>
+                    <span>C:\Users\pavan.goundla\AppData\Local\Temp\testng-eclipse--665584050\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,16 +102,6 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="loginToReachHealthWithInvalidCredentials">loginToReachHealthWithInvalidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)">loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
@@ -137,21 +127,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginToReachHealthWithInvalidCredentials">
-                  </a> <!-- loginToReachHealthWithInvalidCredentials -->
-                  <span class="method-name">loginToReachHealthWithInvalidCredentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)">
-                  </a> <!-- loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123) -->
-                  <span class="method-name">loginToReachHealthWithValidCredentials</span>
-                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">
                   </a> <!-- validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
                   <span class="method-name">validateAllPageTabs</span>
@@ -163,7 +138,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pavan.goundla\AppData\Local\Temp\testng-eclipse-152217041\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pavan.goundla\AppData\Local\Temp\testng-eclipse--665584050\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -172,7 +147,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;SeleniumJavaFramework.ReachHealthTests&quot;/&gt;
+      &lt;class name=&quot;SeleniumJavaFramework.ReachHealthTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;validateAllPageTabs&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- SeleniumJavaFramework.ReachHealthTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -212,24 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validateAllPageTabs')
 data.setCell(0, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(0, 3, 11858);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginToReachHealthWithValidCredentials')
-data.setCell(1, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(1, 3, 6516);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginToReachHealthWithInvalidCredentials')
-data.setCell(2, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(2, 3, 1261);
+data.setCell(0, 3, 16473);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -244,9 +215,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SeleniumJavaFramework.ReachHealthTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginToReachHealthWithInvalidCredentials</span>
+                <br/>
+                <span class="ignored-method-name">loginToReachHealthWithValidCredentials</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -261,36 +241,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginToReachHealthWithInvalidCredentials</span>
-                <span class="method-start">6941 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">8205 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">12425 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">18614 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">25133 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">25536 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">30986 ms</span>
+                <span class="method-start">8301 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42845 ms</span>
+                <span class="method-start">24776 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

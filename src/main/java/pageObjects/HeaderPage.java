@@ -15,9 +15,10 @@ public WebDriver driver;
 		this.driver = driver;
 	}
 	
-	public void selectOptionFromUserIcon() {
+	public void mouseHoverOnUserIcon() {
 		Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(USER_ICON)).perform();
+		a.moveToElement(driver.findElement(USER_ICON)).build().perform();
+		driver.findElement(SIGN_OUT).click();
 	}
 	
 	
