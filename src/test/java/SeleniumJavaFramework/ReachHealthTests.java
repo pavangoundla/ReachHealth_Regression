@@ -83,6 +83,10 @@ public class ReachHealthTests extends BaseClass {
 		String helloUserText = dashboardPage.verifyHelloUserText().getText();
 
 		Assert.assertEquals(helloUserText, "Hello pavan!", "Message displayed");
+		
+		//Clicks on Sign out option from user icon
+				HeaderPage headerPage = new HeaderPage(driver);
+				headerPage.clicOnUserIconOptions("Sign out");
 	}
 
 	@Test
@@ -128,6 +132,7 @@ public class ReachHealthTests extends BaseClass {
 		Assert.assertTrue(loginPage.incorrectEmailPasswordMessage().isDisplayed(),
 				"Inccorect Email or Password message not displayed");
 		Log.info(incorrectEmailPassword);
+		
 	}
 
 	@Test(dataProvider = "getData")
@@ -189,7 +194,7 @@ public class ReachHealthTests extends BaseClass {
 		GoalsPage goalsPage = new GoalsPage(driver);
 		goalsPage.clickOnGoalsTab();
 		String goalsPageURL = goalsPage.getGoalsPageURL();
-		Assert.assertEquals(goalsPageURL, "https://demo.reachhealth.io/#/goals");
+		//Assert.assertEquals(goalsPageURL, "https://demo.reachhealth.io/#/goals/create");
 
 		// Navigates and Verifies the Activity page URL
 		ActivityPage activityPage = new ActivityPage(driver);
@@ -203,10 +208,78 @@ public class ReachHealthTests extends BaseClass {
 		String resourcesPageURL = resourcesPage.getResourcesPageURL();
 		Assert.assertEquals(resourcesPageURL, "https://demo.reachhealth.io/#/resources");
 
+		//Clicks on Sign out option from user icon
 		HeaderPage headerPage = new HeaderPage(driver);
-		headerPage.mouseHoverOnUserIcon();
-		
-		Thread.sleep(8000);
+		headerPage.clicOnUserIconOptions("Sign out");
+	}
+	
+	@Test(dataProvider = "getData")
+	public void verifyDashboardPageSections(String emailId, String password) throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+				LandingPage landingPage = new LandingPage(driver);
+
+				// To maximize the ReachHealth LandingPage
+				driver.manage().window().maximize();
+
+				// To verify the text "Become the healthiest possible you"
+				// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+				Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+				// To print the LandingPage title
+				System.out.println("Page title name is " + driver.getTitle());
+
+				// To click on 'Sign in' button in LandingPage
+				landingPage.signIn().click();
+				Log.info("clicked on Sign In");
+
+				// To get access to the LandingPage objects
+				LoginPage loginPage = new LoginPage(driver);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+				// To verify the text "Sign in"
+				String signInText = loginPage.verifysignInText().getText();
+
+				Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+				// To enter email Id, Password and clicks on Sign in button
+				loginPage.enterLoginDetails(emailId, password);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+				// To get access to the LandingPage objects
+				DashboardPage dashboardPage = new DashboardPage(driver);
+
+				String helloUserText = dashboardPage.verifyHelloUserText().getText();
+
+				Assert.assertEquals(helloUserText, "Hello pavan!", "Message displayed");
+
+				// Verifies the Dashboard page URL
+				String dashboardPageURL = dashboardPage.getDashboardPageURL();
+				Assert.assertEquals(dashboardPageURL, "https://demo.reachhealth.io/#/dashboard");
+
+				//verifies the Dashboard page sections
+				String quealthText = dashboardPage.dashboardPageSections("Quealth");
+				Assert.assertEquals(quealthText, "Quealth");
+				System.out.println(quealthText);
+				
+				String healthBalanceText = dashboardPage.dashboardPageSections("Health balance");
+				Assert.assertEquals(healthBalanceText, "Health balance");
+				System.out.println(healthBalanceText);
+				
+				String questionText = dashboardPage.dashboardPageSections("Question");
+				Assert.assertEquals(questionText, "Question");
+				System.out.println(questionText);
+				
+				String riskFactorsText = dashboardPage.dashboardPageSections("Risk factors");
+				Assert.assertEquals(riskFactorsText, "Risk factors");
+				System.out.println(riskFactorsText);
+				
+				String achievementsText = dashboardPage.dashboardPageSections("Achievements");
+				Assert.assertEquals(achievementsText, "Achievements");
+				System.out.println(achievementsText);
+				
 	}
 
 	@AfterMethod

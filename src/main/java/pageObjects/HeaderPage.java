@@ -15,12 +15,19 @@ public WebDriver driver;
 		this.driver = driver;
 	}
 	
-	public void mouseHoverOnUserIcon() {
+	public void clicOnUserIconOptions(String enterAUserIconOption) {
 		Actions a = new Actions(driver);
 		a.moveToElement(driver.findElement(USER_ICON)).build().perform();
+		if(enterAUserIconOption=="Sign out") {
 		driver.findElement(SIGN_OUT).click();
-	}
-	
+	    }
+		else if(enterAUserIconOption=="Account settings") {
+			driver.findElement(ACCOUNT_SETTINGS).click();
+			}
+		else if(enterAUserIconOption=="Achievements"){
+			driver.findElement(ACHIEVEMENTS).click();
+		}
+		}
 	
 
 }
