@@ -39,7 +39,7 @@ public class ReachHealthTests extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
-	public void loginToReachHealthWithValidCredentials(String emailId, String password) throws IOException {
+	public void TC01_loginToReachHealthWithValidCredentials(String emailId, String password) throws IOException {
 
 //		// To load ReachHealth application
 //		driver.get(prop.getProperty("ReachHealth_Demo"));
@@ -90,7 +90,7 @@ public class ReachHealthTests extends BaseClass {
 	}
 
 	@Test
-	public void loginToReachHealthWithInvalidCredentials() throws IOException {
+	public void TC02_loginToReachHealthWithInvalidCredentials() throws IOException {
 
 //		// To load ReachHealth application
 //		driver.get(prop.getProperty("ReachHealth_Demo"));
@@ -136,7 +136,7 @@ public class ReachHealthTests extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
-	public void validateAllPageTabs(String emailId, String password) throws IOException, InterruptedException {
+	public void TC03_validateAllPageTabs(String emailId, String password) throws IOException, InterruptedException {
 //		// To load ReachHealth application
 //		driver.get(prop.getProperty("ReachHealth_Demo"));
 
@@ -214,7 +214,7 @@ public class ReachHealthTests extends BaseClass {
 	}
 	
 	@Test(dataProvider = "getData")
-	public void verifyDashboardPageSections(String emailId, String password) throws IOException, InterruptedException {
+	public void TC04_verifyDashboardPageSections(String emailId, String password) throws IOException, InterruptedException {
 		// To get access to the LandingPage objects
 				LandingPage landingPage = new LandingPage(driver);
 
@@ -281,7 +281,96 @@ public class ReachHealthTests extends BaseClass {
 				System.out.println(achievementsText);
 				
 	}
+	@Test(dataProvider = "getData")
+	public void TC05_viewQuealthReport(String emailId, String password) throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+				LandingPage landingPage = new LandingPage(driver);
 
+				// To maximize the ReachHealth LandingPage
+				driver.manage().window().maximize();
+
+				// To verify the text "Become the healthiest possible you"
+				// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+				Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+				// To print the LandingPage title
+				System.out.println("Page title name is " + driver.getTitle());
+
+				// To click on 'Sign in' button in LandingPage
+				landingPage.signIn().click();
+				Log.info("clicked on Sign In");
+
+				// To get access to the LandingPage objects
+				LoginPage loginPage = new LoginPage(driver);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+				// To verify the text "Sign in"
+				String signInText = loginPage.verifysignInText().getText();
+
+				Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+				// To enter email Id, Password and clicks on Sign in button
+				loginPage.enterLoginDetails(emailId, password);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				
+				// Navigates and Verifies the Assessment page URL
+				AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
+				assessmentsPage.clickOnAssessmentsTab();
+				String assessmentPageURL = assessmentsPage.getAssessmentsPageURL();
+				Assert.assertEquals(assessmentPageURL, "https://demo.reachhealth.io/#/assessments");
+				assessmentsPage.clickOnScoreCard("Quealth");
+				assessmentsPage.assessmentPageTexts("Your Quealth score is");
+				
+	}
+	
+	@Test(dataProvider = "getData")
+	public void TC06_verifyAssessmentPageSections(String emailId, String password) throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+				LandingPage landingPage = new LandingPage(driver);
+
+				// To maximize the ReachHealth LandingPage
+				driver.manage().window().maximize();
+
+				// To verify the text "Become the healthiest possible you"
+				// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+				Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+				// To print the LandingPage title
+				System.out.println("Page title name is " + driver.getTitle());
+
+				// To click on 'Sign in' button in LandingPage
+				landingPage.signIn().click();
+				Log.info("clicked on Sign In");
+
+				// To get access to the LandingPage objects
+				LoginPage loginPage = new LoginPage(driver);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+				// To verify the text "Sign in"
+				String signInText = loginPage.verifysignInText().getText();
+
+				Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+				// To enter email Id, Password and clicks on Sign in button
+				loginPage.enterLoginDetails(emailId, password);
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				
+				// Navigates and Verifies the Assessment page URL
+				AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
+				assessmentsPage.clickOnAssessmentsTab();
+				String assessmentPageURL = assessmentsPage.getAssessmentsPageURL();
+				Assert.assertEquals(assessmentPageURL, "https://demo.reachhealth.io/#/assessments");
+				assessmentsPage.assessmentText();
+				assessmentsPage.theBigFiveAndRiskFactorsTexts("The big five");
+				assessmentsPage.theBigFiveAndRiskFactorsTexts("Risk factors");
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.close();
