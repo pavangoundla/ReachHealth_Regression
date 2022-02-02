@@ -20,4 +20,12 @@ public WebDriver driver;
 	public String getGoalsPageURL() {
 		return driver.getCurrentUrl();
 	}
+	
+	public void GoalsText() {
+		driver.findElement(GOALSPAGE_GOALSTEXT).isDisplayed();
+	}
+	
+	public void dailiesAndHabitsTexts(String enterGoalsPageText) {
+		driver.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", enterGoalsPageText))).isDisplayed();
+	}
 }

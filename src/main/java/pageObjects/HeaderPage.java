@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -15,18 +17,19 @@ public WebDriver driver;
 		this.driver = driver;
 	}
 	
-	public void clicOnUserIconOptions(String enterAUserIconOption) {
+	public void clickOnUserIconOptions(String enterAUserIconOption) {
 		Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(USER_ICON)).build().perform();
-		if(enterAUserIconOption=="Sign out") {
-		driver.findElement(SIGN_OUT).click();
+		a.moveToElement(driver.findElement(USER_ICON)).click().build().perform();
+		if(enterAUserIconOption=="Sign out"||enterAUserIconOption=="Account settings"||enterAUserIconOption=="Achievements") {
+		//sdriver.findElement(SIGN_OUT).click();
+		driver.findElement(By.xpath(String.format("//a/span[text()='%s']", enterAUserIconOption))).click();
 	    }
-		else if(enterAUserIconOption=="Account settings") {
-			driver.findElement(ACCOUNT_SETTINGS).click();
-			}
-		else if(enterAUserIconOption=="Achievements"){
-			driver.findElement(ACHIEVEMENTS).click();
-		}
+//		else if(enterAUserIconOption=="Account settings") {
+//			driver.findElement(ACCOUNT_SETTINGS).click();
+//			}
+//		else if(enterAUserIconOption=="Achievements"){
+//			driver.findElement(ACHIEVEMENTS).click();
+//		}
 		}
 	
 

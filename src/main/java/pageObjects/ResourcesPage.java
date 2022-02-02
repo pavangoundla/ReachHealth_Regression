@@ -21,4 +21,8 @@ public WebDriver driver;
 	public String getResourcesPageURL() {
 		return driver.getCurrentUrl();
 	}
+	
+	public void resourcesPageTexts(String enterResourcesPageText) {
+		driver.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", enterResourcesPageText))).isDisplayed();
+	}
 }

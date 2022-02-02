@@ -20,4 +20,12 @@ public WebDriver driver;
 	public String getActivityPageURL() {
 		return driver.getCurrentUrl();
 	}
+	
+	public void todayText() {
+		driver.findElement(ACTIVITYPAGE_TODAYTEXT).isDisplayed();
+	}
+	
+	public void activityPageTexts(String enterActivityPageText) {
+		driver.findElement(By.xpath(String.format("//p[contains(text(),'%s')]", enterActivityPageText))).isDisplayed();
+	}
 }
