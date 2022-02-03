@@ -1,6 +1,8 @@
 package SeleniumJavaFramework;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
@@ -282,6 +284,10 @@ public class ReachHealthTests extends BaseClass {
 		Assert.assertEquals(achievementsText, "Achievements");
 		System.out.println(achievementsText);
 
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
+
 	}
 
 	@Test(dataProvider = "getData")
@@ -327,6 +333,9 @@ public class ReachHealthTests extends BaseClass {
 		assessmentsPage.clickOnScoreCard("Quealth");
 		assessmentsPage.assessmentPageTexts("Your Quealth score is");
 
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@Test(dataProvider = "getData")
@@ -373,6 +382,9 @@ public class ReachHealthTests extends BaseClass {
 		assessmentsPage.assessmentText();
 		assessmentsPage.theBigFiveAndRiskFactorsTexts("The big five");
 		assessmentsPage.theBigFiveAndRiskFactorsTexts("Risk factors");
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@Test(dataProvider = "getData")
@@ -419,6 +431,10 @@ public class ReachHealthTests extends BaseClass {
 		goalsPage.GoalsText();
 		goalsPage.dailiesAndHabitsTexts("Dailies");
 		goalsPage.dailiesAndHabitsTexts("Habits");
+
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@Test(dataProvider = "getData")
@@ -470,6 +486,9 @@ public class ReachHealthTests extends BaseClass {
 		activityPage.activityPageTexts("Calories");
 		activityPage.activityPageTexts("Heart");
 		activityPage.activityPageTexts("Sleep");
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@Test(dataProvider = "getData")
@@ -518,7 +537,9 @@ public class ReachHealthTests extends BaseClass {
 		resourcesPage.resourcesPageTexts("Featured");
 		resourcesPage.resourcesPageTexts("Most popular");
 		resourcesPage.resourcesPageTexts("Recipes");
-
+		// Clicks on Sign out option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@Test(dataProvider = "getData")
@@ -558,6 +579,75 @@ public class ReachHealthTests extends BaseClass {
 		// Clicks on Account settings option from user icon
 		HeaderPage headerPage = new HeaderPage(driver);
 		headerPage.clickOnUserIconOptions("Account settings");
+
+		// Verifies Name, Email and Date of Birth
+		String name = headerPage.userBioData("name");
+		String email = headerPage.userBioData("email");
+		String day = headerPage.userBioData("day");
+		String month = headerPage.userBioData("month");
+		String year = headerPage.userBioData("year");
+		Assert.assertEquals(name, "pavan", "name displayed incorrectly");
+		Assert.assertEquals(email, "Pavan.goundla+2210@zenq.com", "email displayed incorrectly");
+		Assert.assertEquals(day, "1", "day displayed incorrectly");
+		Assert.assertEquals(month, "9", "month displayed incorrectly");
+		Assert.assertEquals(year, "1981", "year displayed incorrectly");
+
+		headerPage.biologicalSexDropDown("Male");
+
+		List<String> heightValues = headerPage.verifyHeightValues();
+		System.out.println(heightValues.get(0));
+		System.out.println(heightValues.get(1));
+		Assert.assertEquals(heightValues.get(0), "1", "Primary value is incorrect");
+		Assert.assertEquals(heightValues.get(1), "80", "Secondary value is incorrect");
+
+		// Clicks on Sign out option from user icon
+		headerPage.clickOnUserIconOptions("Sign out");
+	}
+
+	@Test(dataProvider = "getData")
+	public void TC12_validateUserAchievements(String emailId, String password)
+			throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+		LandingPage landingPage = new LandingPage(driver);
+
+		// To maximize the ReachHealth LandingPage
+		driver.manage().window().maximize();
+
+		// To verify the text "Become the healthiest possible you"
+		// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+		Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+		// To print the LandingPage title
+		System.out.println("Page title name is " + driver.getTitle());
+
+		// To click on 'Sign in' button in LandingPage
+		landingPage.signIn().click();
+		Log.info("clicked on Sign In");
+
+		// To get access to the LandingPage objects
+		LoginPage loginPage = new LoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To verify the text "Sign in"
+		String signInText = loginPage.verifysignInText().getText();
+
+		Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+		// To enter email Id, Password and clicks on Sign in button
+		loginPage.enterLoginDetails(emailId, password);
+
+		// Clicks on Account settings option from user icon
+		HeaderPage headerPage = new HeaderPage(driver);
+		headerPage.clickOnUserIconOptions("Achievements");
+
+		// Verifies Achievements, Badges and Timeline sections
+		headerPage.achievementsText();
+		headerPage.badgesAndTimelineText("Badges");
+		headerPage.badgesAndTimelineText("Timeline");
+		// Clicks on Sign out option from user icon
+		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
 	@AfterMethod
