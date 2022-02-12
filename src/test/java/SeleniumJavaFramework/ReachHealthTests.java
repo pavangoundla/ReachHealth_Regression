@@ -1,6 +1,8 @@
 package SeleniumJavaFramework;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,6 +40,16 @@ public class ReachHealthTests extends BaseClass {
 		Log.info("Driver is initialized");
 		// To load ReachHealth application
 		driver.get(prop.getProperty("ReachHealth_Demo"));
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.acceptCookie();
+	}
+
+	public String getDateAndTime() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("d");
+		LocalDateTime now = LocalDateTime.now();
+		String currentDate = dtf.format(now);
+		System.out.println(dtf.format(now));
+		return currentDate;
 	}
 
 	@Test(dataProvider = "getData")
@@ -429,8 +441,8 @@ public class ReachHealthTests extends BaseClass {
 		// Assert.assertEquals(goalsPageURL,
 		// "https://demo.reachhealth.io/#/goals/create");
 		goalsPage.GoalsText();
-		goalsPage.dailiesAndHabitsTexts("Dailies");
-		goalsPage.dailiesAndHabitsTexts("Habits");
+		goalsPage.goalsPageTextsOrButtons("Dailies");
+		goalsPage.goalsPageTextsOrButtons("Habits");
 
 		// Clicks on Sign out option from user icon
 		HeaderPage headerPage = new HeaderPage(driver);
@@ -543,6 +555,53 @@ public class ReachHealthTests extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
+	public void TC10_createAGoal(String emailId, String password) throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+		LandingPage landingPage = new LandingPage(driver);
+
+		// To maximize the ReachHealth LandingPage
+		driver.manage().window().maximize();
+
+		// To verify the text "Become the healthiest possible you"
+		// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+		Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+		// To print the LandingPage title
+		System.out.println("Page title name is " + driver.getTitle());
+
+		// To click on 'Sign in' button in LandingPage
+		landingPage.signIn().click();
+		Log.info("clicked on Sign In");
+
+		// To get access to the LandingPage objects
+		LoginPage loginPage = new LoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To verify the text "Sign in"
+		String signInText = loginPage.verifysignInText().getText();
+
+		Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+		// To enter email Id, Password and clicks on Sign in button
+		loginPage.enterLoginDetails(emailId, password);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// Navigates and Verifies the Goals page URL
+		GoalsPage goalsPage = new GoalsPage(driver);
+		goalsPage.clickOnGoalsTab();
+		String goalsPageURL = goalsPage.getGoalsPageURL();
+		goalsPage.goalsPageTextsOrButtons("Set new goal");
+		goalsPage.clickOnAGoal("Weight loss", "Eat more fibre");
+		goalsPage.goalsPageTextsOrButtons("Set goal");
+		goalsPage.goalsPageTextsOrButtons("Complete goal");
+		goalsPage.verifyGoalCompletedDate(getDateAndTime());
+
+	}
+
+	@Test(dataProvider = "getData")
 	public void TC11_validateUserAccountSettings(String emailId, String password)
 			throws IOException, InterruptedException {
 		// To get access to the LandingPage objects
@@ -644,12 +703,140 @@ public class ReachHealthTests extends BaseClass {
 
 		// Verifies Achievements, Badges and Timeline sections
 		headerPage.achievementsText();
-		headerPage.badgesAndTimelineText("Badges");
-		headerPage.badgesAndTimelineText("Timeline");
+		headerPage.badgesAndTimelineText("Latest badges");
 		// Clicks on Sign out option from user icon
 		headerPage.clickOnUserIconOptions("Sign out");
 	}
 
+	@Test(dataProvider = "getData")
+	public void TC13_UpdateQuealthAssessmentWithPoorInputs(String emailId, String password)
+			throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+		LandingPage landingPage = new LandingPage(driver);
+
+		// To maximize the ReachHealth LandingPage
+		driver.manage().window().maximize();
+
+		// To verify the text "Become the healthiest possible you"
+		// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+		Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+		// To print the LandingPage title
+		System.out.println("Page title name is " + driver.getTitle());
+
+		// To click on 'Sign in' button in LandingPage
+		landingPage.signIn().click();
+		Log.info("clicked on Sign In");
+
+		// To get access to the LandingPage objects
+		LoginPage loginPage = new LoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To verify the text "Sign in"
+		String signInText = loginPage.verifysignInText().getText();
+
+		Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+		// To enter email Id, Password and clicks on Sign in button
+		loginPage.enterLoginDetails(emailId, password);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To get access to the LandingPage objects
+		DashboardPage dashboardPage = new DashboardPage(driver);
+
+		String helloUserText = dashboardPage.verifyHelloUserText().getText();
+
+		Assert.assertEquals(helloUserText, "Hello pavan!", "Message displayed");
+
+		// Verifies the Dashboard page URL
+		String dashboardPageURL = dashboardPage.getDashboardPageURL();
+		Assert.assertEquals(dashboardPageURL, "https://demo.reachhealth.io/#/dashboard");
+
+		// verifies the Dashboard page sections
+		String quealthText = dashboardPage.dashboardPageSections("Quealth");
+		Assert.assertEquals(quealthText, "Quealth");
+		System.out.println(quealthText);
+		dashboardPage.clickOnDashboardPageButton();
+
+		AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
+		assessmentsPage.clickOnAssessmentPageButton();
+		assessmentsPage.answerHowMuchDoYouWeighQueation("How much do you weigh?", "90");
+		assessmentsPage.answerModerateIntensityActivityQuestion("Do you know how many minutes of moderate intensity activity you generally carry out each week?", "No",
+				"", "", "In general, how many days a week do you carry out some moderate activity?", "0 days");
+		assessmentsPage.answerVigorousIntensityActivityQuestion("Do you know how many minutes of vigorous intensity activity you generally carry out each week?", "No","",
+				"", "In general, how many days a week do you carry out some vigorous activity?", "0 days");
+		assessmentsPage.answerSmokeQuestion("Do you smoke cigarettes on a daily basis?", "Yes", "How many cigarettes a day do you generally smoke?",
+				"30", "", "");
+		assessmentsPage.verifyQuealthScore("Your Quealth score is 1");
+	}
+
+	@Test(dataProvider = "getData")
+	public void TC14_UpdateQuealthAssessmentWithGoodInputs(String emailId, String password)
+			throws IOException, InterruptedException {
+		// To get access to the LandingPage objects
+		LandingPage landingPage = new LandingPage(driver);
+
+		// To maximize the ReachHealth LandingPage
+		driver.manage().window().maximize();
+
+		// To verify the text "Become the healthiest possible you"
+		// String text = landingPage.verifyhealthiestPossibleText().getText();
+
+		Assert.assertTrue(landingPage.verifyhealthiestPossibleText().isDisplayed(), "TextDisplayed");
+
+		// To print the LandingPage title
+		System.out.println("Page title name is " + driver.getTitle());
+
+		// To click on 'Sign in' button in LandingPage
+		landingPage.signIn().click();
+		Log.info("clicked on Sign In");
+
+		// To get access to the LandingPage objects
+		LoginPage loginPage = new LoginPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To verify the text "Sign in"
+		String signInText = loginPage.verifysignInText().getText();
+
+		Assert.assertEquals(signInText, "Sign in", "Message displayed");
+
+		// To enter email Id, Password and clicks on Sign in button
+		loginPage.enterLoginDetails(emailId, password);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// To get access to the LandingPage objects
+		DashboardPage dashboardPage = new DashboardPage(driver);
+
+		String helloUserText = dashboardPage.verifyHelloUserText().getText();
+
+		Assert.assertEquals(helloUserText, "Hello pavan!", "Message displayed");
+
+		// Verifies the Dashboard page URL
+		String dashboardPageURL = dashboardPage.getDashboardPageURL();
+		Assert.assertEquals(dashboardPageURL, "https://demo.reachhealth.io/#/dashboard");
+
+		// verifies the Dashboard page sections
+		String quealthText = dashboardPage.dashboardPageSections("Quealth");
+		Assert.assertEquals(quealthText, "Quealth");
+		System.out.println(quealthText);
+		dashboardPage.clickOnDashboardPageButton();
+
+		AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
+		assessmentsPage.clickOnAssessmentPageButton();
+		assessmentsPage.answerHowMuchDoYouWeighQueation("How much do you weigh?", "60");
+		assessmentsPage.answerModerateIntensityActivityQuestion("Do you know how many minutes of moderate intensity activity you generally carry out each week?", "Yes",
+				"How many minutes of moderate intensity activity do you generally carry out each week?", "150", "", "");
+		assessmentsPage.answerVigorousIntensityActivityQuestion("Do you know how many minutes of vigorous intensity activity you generally carry out each week?", "Yes",
+				"How many minutes of vigorous intensity activity do you generally carry out each week?","150", "", "");
+		assessmentsPage.answerSmokeQuestion("Do you smoke cigarettes on a daily basis?", "No", "",
+				"", "How often do you feel you’re significantly exposed to other people’s cigarette smoke?", "Rarely or never");
+		assessmentsPage.verifyQuealthScore("Your Quealth score is 90");
+	}
 	@AfterMethod
 	public void tearDown() {
 		driver.close();

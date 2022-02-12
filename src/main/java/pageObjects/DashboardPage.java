@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +19,9 @@ public WebDriver driver;
 	}
 
 	public WebElement verifyHelloUserText() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		return driver.findElement(HELLO_USERTEXT);
+		
 	}
 	
 	public String getDashboardPageURL() {
@@ -47,6 +51,10 @@ public WebDriver driver;
 		
 		return enterSectionName;
 		
+	}
+	
+	public void clickOnDashboardPageButton() {
+		driver.findElement(VIEW_REPORTBUTTON).click();
 	}
 	
 

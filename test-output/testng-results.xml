@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="10" total="11" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-03T17:58:38 IST" name="Default suite" finished-at="2022-02-03T17:58:53 IST" duration-ms="14106">
+  <suite started-at="2022-02-12T15:56:32 IST" name="Default suite" finished-at="2022-02-12T16:00:06 IST" duration-ms="214628">
     <groups>
     </groups>
-    <test started-at="2022-02-03T17:58:38 IST" name="Default test" finished-at="2022-02-03T17:58:53 IST" duration-ms="14106">
+    <test started-at="2022-02-12T15:56:32 IST" name="Default test" finished-at="2022-02-12T16:00:06 IST" duration-ms="214628">
       <class name="SeleniumJavaFramework.ReachHealthTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@362045c0]" started-at="2022-02-03T17:58:38 IST" name="setUp" finished-at="2022-02-03T17:58:45 IST" duration-ms="6477" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:32 IST" name="setUp" finished-at="2022-02-12T15:56:37 IST" duration-ms="4904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC01_loginToReachHealthWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@362045c0]" started-at="2022-02-03T17:58:45 IST" name="TC01_loginToReachHealthWithValidCredentials" data-provider="getData" finished-at="2022-02-03T17:58:52 IST" duration-ms="7015" status="PASS">
+        <test-method signature="TC01_loginToReachHealthWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:37 IST" name="TC01_loginToReachHealthWithValidCredentials" data-provider="getData" finished-at="2022-02-12T15:56:44 IST" duration-ms="7406" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,351 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_loginToReachHealthWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@362045c0]" started-at="2022-02-03T17:58:52 IST" name="tearDown" finished-at="2022-02-03T17:58:53 IST" duration-ms="553" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:44 IST" name="tearDown" finished-at="2022-02-12T15:56:44 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:44 IST" name="setUp" finished-at="2022-02-12T15:56:50 IST" duration-ms="5244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC02_loginToReachHealthWithInvalidCredentials()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:50 IST" name="TC02_loginToReachHealthWithInvalidCredentials" finished-at="2022-02-12T15:56:51 IST" duration-ms="1326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_loginToReachHealthWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:51 IST" name="tearDown" finished-at="2022-02-12T15:56:51 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:51 IST" name="setUp" finished-at="2022-02-12T15:56:57 IST" duration-ms="5507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC03_validateAllPageTabs(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:56:57 IST" name="TC03_validateAllPageTabs" data-provider="getData" finished-at="2022-02-12T15:57:04 IST" duration-ms="7163" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://demo.reachhealth.io/#/goals/create] but found [https://demo.reachhealth.io/#/goals]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://demo.reachhealth.io/#/goals/create] but found [https://demo.reachhealth.io/#/goals]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at SeleniumJavaFramework.ReachHealthTests.TC03_validateAllPageTabs(ReachHealthTests.java:212)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_validateAllPageTabs -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:04 IST" name="tearDown" finished-at="2022-02-12T15:57:04 IST" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:04 IST" name="setUp" finished-at="2022-02-12T15:57:09 IST" duration-ms="4923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC04_verifyDashboardPageSections(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:09 IST" name="TC04_verifyDashboardPageSections" data-provider="getData" finished-at="2022-02-12T15:57:16 IST" duration-ms="7075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04_verifyDashboardPageSections -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:16 IST" name="tearDown" finished-at="2022-02-12T15:57:17 IST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:17 IST" name="setUp" finished-at="2022-02-12T15:57:22 IST" duration-ms="5054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC05_viewQuealthReport(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:22 IST" name="TC05_viewQuealthReport" data-provider="getData" finished-at="2022-02-12T15:57:28 IST" duration-ms="6664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_viewQuealthReport -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:28 IST" name="tearDown" finished-at="2022-02-12T15:57:29 IST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:29 IST" name="setUp" finished-at="2022-02-12T15:57:34 IST" duration-ms="4921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC06_verifyAssessmentPageSections(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:34 IST" name="TC06_verifyAssessmentPageSections" data-provider="getData" finished-at="2022-02-12T15:57:40 IST" duration-ms="6081" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_verifyAssessmentPageSections -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:40 IST" name="tearDown" finished-at="2022-02-12T15:57:44 IST" duration-ms="4261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:44 IST" name="setUp" finished-at="2022-02-12T15:57:49 IST" duration-ms="5495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC07_verifyGoalsPageSections(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:49 IST" name="TC07_verifyGoalsPageSections" data-provider="getData" finished-at="2022-02-12T15:57:57 IST" duration-ms="7192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07_verifyGoalsPageSections -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:57 IST" name="tearDown" finished-at="2022-02-12T15:57:57 IST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:57:57 IST" name="setUp" finished-at="2022-02-12T15:58:02 IST" duration-ms="5615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC08_verifyActivityPageSections(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:02 IST" name="TC08_verifyActivityPageSections" data-provider="getData" finished-at="2022-02-12T15:58:09 IST" duration-ms="6272" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC08_verifyActivityPageSections -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:09 IST" name="tearDown" finished-at="2022-02-12T15:58:13 IST" duration-ms="4226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:13 IST" name="setUp" finished-at="2022-02-12T15:58:18 IST" duration-ms="4752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC09_verifyResourcesPageSections(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:18 IST" name="TC09_verifyResourcesPageSections" data-provider="getData" finished-at="2022-02-12T15:58:29 IST" duration-ms="11369" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC09_verifyResourcesPageSections -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:29 IST" name="tearDown" finished-at="2022-02-12T15:58:33 IST" duration-ms="4196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:33 IST" name="setUp" finished-at="2022-02-12T15:58:38 IST" duration-ms="4972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC10_createAGoal(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:38 IST" name="TC10_createAGoal" data-provider="getData" finished-at="2022-02-12T15:58:48 IST" duration-ms="9455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10_createAGoal -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:48 IST" name="tearDown" finished-at="2022-02-12T15:58:48 IST" duration-ms="319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:48 IST" name="setUp" finished-at="2022-02-12T15:58:53 IST" duration-ms="5149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC11_validateUserAccountSettings(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:58:53 IST" name="TC11_validateUserAccountSettings" data-provider="getData" finished-at="2022-02-12T15:59:00 IST" duration-ms="7131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11_validateUserAccountSettings -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:00 IST" name="tearDown" finished-at="2022-02-12T15:59:05 IST" duration-ms="4247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:05 IST" name="setUp" finished-at="2022-02-12T15:59:09 IST" duration-ms="4828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC12_validateUserAchievements(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:09 IST" name="TC12_validateUserAchievements" data-provider="getData" finished-at="2022-02-12T15:59:17 IST" duration-ms="7149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC12_validateUserAchievements -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:17 IST" name="tearDown" finished-at="2022-02-12T15:59:17 IST" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:17 IST" name="setUp" finished-at="2022-02-12T15:59:22 IST" duration-ms="5218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC13_UpdateQuealthAssessmentWithPoorInputs(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:22 IST" name="TC13_UpdateQuealthAssessmentWithPoorInputs" data-provider="getData" finished-at="2022-02-12T15:59:39 IST" duration-ms="17155" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC13_UpdateQuealthAssessmentWithPoorInputs -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:39 IST" name="tearDown" finished-at="2022-02-12T15:59:43 IST" duration-ms="4223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:43 IST" name="setUp" finished-at="2022-02-12T15:59:48 IST" duration-ms="4728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC14_UpdateQuealthAssessmentWithGoodInputs(java.lang.String,java.lang.String)[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T15:59:48 IST" name="TC14_UpdateQuealthAssessmentWithGoodInputs" data-provider="getData" finished-at="2022-02-12T16:00:06 IST" duration-ms="17940" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pavan.goundla+2210@zenq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pavan@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14_UpdateQuealthAssessmentWithGoodInputs -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJavaFramework.ReachHealthTests@65045a87]" started-at="2022-02-12T16:00:06 IST" name="tearDown" finished-at="2022-02-12T16:00:06 IST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

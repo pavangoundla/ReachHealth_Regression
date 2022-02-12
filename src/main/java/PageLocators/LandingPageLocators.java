@@ -6,5 +6,6 @@ public interface LandingPageLocators {
 	
 	By SIGN_IN = By.cssSelector("a[href*='login']");
 	By HEALTHIEST_POSSIBLE_TITLE = By.cssSelector("h1[data-testid='title']");
+	By COOKIE_ACCEPT = By.xpath("//button[contains(text(),'Got it')]");
 
 }

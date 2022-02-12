@@ -5,7 +5,6 @@
     <classes>
       <class name="SeleniumJavaFramework.ReachHealthTests">
         <methods>
-          <include name="TC01_loginToReachHealthWithValidCredentials" invocation-numbers="0"/>
           <include name="TC03_validateAllPageTabs" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>

@@ -11,5 +11,6 @@ public interface DashboardPageLocators {
 	By HEALTHBALANCE_TEXT = By.xpath("//p[text()='Health balance']");
 	By RISKFACTORS_TEXT = By.xpath("//h3[text()='Risk factors']");
 	By ACHIEVEMENTS_TEXT = By.xpath("//span[text()='Achievements']");
+	By VIEW_REPORTBUTTON = By.xpath("//a/button[contains(text(),'View report')]");
 
 }

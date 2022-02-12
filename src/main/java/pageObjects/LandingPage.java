@@ -23,5 +23,9 @@ public class LandingPage implements LandingPageLocators{
 	public WebElement verifyhealthiestPossibleText() {
 		return driver.findElement(HEALTHIEST_POSSIBLE_TITLE);
 	}
+	
+	public void acceptCookie() {
+		driver.findElement(COOKIE_ACCEPT).click();
+	}
 
 }
