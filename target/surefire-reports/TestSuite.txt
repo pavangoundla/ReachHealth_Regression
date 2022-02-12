@@ -1,4 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.76 s - in TestSuite
+Tests run: 14, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 239.456 s <<< FAILURE! - in TestSuite
+SeleniumJavaFramework.ReachHealthTests.TC03_validateAllPageTabs[Pavan.goundla+2210@zenq.com, Pavan@123](1)  Time elapsed: 7.541 s  <<< FAILURE!
+java.lang.AssertionError: expected [https://demo.reachhealth.io/#/goals/create] but found [https://demo.reachhealth.io/#/goals]
+	at SeleniumJavaFramework.ReachHealthTests.TC03_validateAllPageTabs(ReachHealthTests.java:212)
+
+SeleniumJavaFramework.ReachHealthTests.TC13_UpdateQuealthAssessmentWithPoorInputs[Pavan.goundla+2210@zenq.com, Pavan@123](1)  Time elapsed: 10.036 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span class="text-small text-content-secondary">...</span> is not clickable at point (1068, 469). Other element would receive the click: <circle class="fill-current" cx="12" cy="12" r="12"></circle>
+  (Session info: chrome=98.0.4758.82)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SYSR159', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\PAVAN~1.GOU\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54387}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e364054a8d26cd4ca8bb009acbbe2427
+	at SeleniumJavaFramework.ReachHealthTests.TC13_UpdateQuealthAssessmentWithPoorInputs(ReachHealthTests.java:767)
+
+SeleniumJavaFramework.ReachHealthTests.TC14_UpdateQuealthAssessmentWithGoodInputs[Pavan.goundla+2210@zenq.com, Pavan@123](1)  Time elapsed: 10.351 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=98.0.4758.82)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SYSR159', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\PAVAN~1.GOU\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54423}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b510b96af0cfbede299d5a980203503
+	at SeleniumJavaFramework.ReachHealthTests.TC14_UpdateQuealthAssessmentWithGoodInputs(ReachHealthTests.java:834)
+

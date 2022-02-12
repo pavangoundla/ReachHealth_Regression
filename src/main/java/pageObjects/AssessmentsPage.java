@@ -73,7 +73,7 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 			String enterYesOrNo, String howManyMinutesOfModerateIntensity,
 			String enterMinutesOfModerateIntensityActivity, String howManyDaysDoYouPerformModerateIntensity,
 			String enterNumberOfModerateIntensityActivityDays) {
-		waitUntilElementIsVisible(10,
+		waitUntilElementIsVisible(20,
 				By.xpath(String.format("//h2[contains(text(),'%s')]", doYouPerformMinutesOfModerateIntensity)));
 		String ModerateIntensityText = driver
 				.findElement(
@@ -81,10 +81,10 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 				.getText();
 		Assert.assertEquals(ModerateIntensityText, doYouPerformMinutesOfModerateIntensity,
 				doYouPerformMinutesOfModerateIntensity + "Not Message displayed");
-		waitUntilElementIsVisible(10, By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo)));
+		waitUntilElementIsVisible(20, By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo)));
 		driver.findElement(By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo))).click();
 		if (enterYesOrNo == "Yes") {
-			waitUntilElementIsVisible(10,
+			waitUntilElementIsVisible(20,
 					By.xpath(String.format("//h2[contains(text(),'%s')]", howManyMinutesOfModerateIntensity)));
 			String minutesOfModerateIntensityText = driver
 					.findElement(
@@ -96,7 +96,7 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 			driver.findElement(ALL_QUESTIONS_INPUT).sendKeys(enterMinutesOfModerateIntensityActivity);
 			driver.findElement(NEXT_BUTTON).click();
 		} else {
-			waitUntilElementIsVisible(10,
+			waitUntilElementIsVisible(20,
 					By.xpath(String.format("//h2[contains(text(),'%s')]", howManyDaysDoYouPerformModerateIntensity)));
 			String howManyDaysDoYouPerformModerateIntensityText = driver
 					.findElement(By.xpath(
@@ -104,7 +104,7 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 					.getText();
 			Assert.assertEquals(howManyDaysDoYouPerformModerateIntensityText, howManyDaysDoYouPerformModerateIntensity,
 					howManyDaysDoYouPerformModerateIntensity + "Not Message displayed");
-			waitUntilElementIsVisible(10, By
+			waitUntilElementIsVisible(20, By
 					.xpath(String.format("//span[contains(text(),'%s')]", enterNumberOfModerateIntensityActivityDays)));
 			driver.findElement(By
 					.xpath(String.format("//span[contains(text(),'%s')]", enterNumberOfModerateIntensityActivityDays)))
@@ -115,7 +115,7 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 	public void answerVigorousIntensityActivityQuestion(String doYouPerformMinutesOfVigorousIntensity,String enterYesOrNo, 
 			String howManyMinutesOfVigorousIntensity, String enterMinutesOfVigorousIntensityActivity,
 			String howManyDaysDoYouPerformVigorousIntensity, String enterNumberOfVigorousIntensityActivityDays) {
-		waitUntilElementIsVisible(10,
+		waitUntilElementIsVisible(20,
 				By.xpath(String.format("//h2[contains(text(),'%s')]", doYouPerformMinutesOfVigorousIntensity)));
 		String VigorousIntensityText = driver
 				.findElement(
@@ -123,10 +123,10 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 				.getText();
 		Assert.assertEquals(VigorousIntensityText, doYouPerformMinutesOfVigorousIntensity,
 				doYouPerformMinutesOfVigorousIntensity + "Not Message displayed");
-		waitUntilElementIsVisible(10, By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo)));
+		waitUntilElementIsVisible(20, By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo)));
 		driver.findElement(By.xpath(String.format("//span[contains(text(),'%s')]", enterYesOrNo))).click();
 		if (enterYesOrNo == "Yes") {
-			waitUntilElementIsVisible(10,
+			waitUntilElementIsVisible(20,
 					By.xpath(String.format("//h2[contains(text(),'%s')]", howManyMinutesOfVigorousIntensity)));
 			String minutesOfVigorousIntensityText = driver
 					.findElement(
@@ -134,11 +134,11 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 					.getText();
 			Assert.assertEquals(minutesOfVigorousIntensityText, howManyMinutesOfVigorousIntensity,
 					howManyMinutesOfVigorousIntensity + "Not Message displayed");
-			waitUntilElementIsVisible(10, ALL_QUESTIONS_INPUT);
+			waitUntilElementIsVisible(20, ALL_QUESTIONS_INPUT);
 			driver.findElement(ALL_QUESTIONS_INPUT).sendKeys(enterMinutesOfVigorousIntensityActivity);
 			driver.findElement(NEXT_BUTTON).click();
 		} else {
-			waitUntilElementIsVisible(10,
+			waitUntilElementIsVisible(20,
 					By.xpath(String.format("//h2[contains(text(),'%s')]", howManyDaysDoYouPerformVigorousIntensity)));
 			String howManyDaysDoYouPerformVigorousIntensityText = driver
 					.findElement(By.xpath(
@@ -146,7 +146,7 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 					.getText();
 			Assert.assertEquals(howManyDaysDoYouPerformVigorousIntensityText, howManyDaysDoYouPerformVigorousIntensity,
 					howManyDaysDoYouPerformVigorousIntensity + "Not Message displayed");
-			waitUntilElementIsVisible(10, By
+			waitUntilElementIsVisible(20, By
 					.xpath(String.format("//span[contains(text(),'%s')]", enterNumberOfVigorousIntensityActivityDays)));
 			driver.findElement(By
 					.xpath(String.format("//span[contains(text(),'%s')]", enterNumberOfVigorousIntensityActivityDays)))
