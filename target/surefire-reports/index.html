@@ -24,23 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
                     <span>C:\Users\pavan.goundla\Desktop\Project\SeleniumJavaFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,31 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods, 3 failed,   11 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">20 methods,   20 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,58 +103,103 @@
                     </span>
                     <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC01_loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)">TC01_loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC01_loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)">TC01_loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC02_loginToReachHealthWithInvalidCredentials">TC02_loginToReachHealthWithInvalidCredentials</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC02_loginToReachHealthWithInvalidCredentials">TC02_loginToReachHealthWithInvalidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC04_verifyDashboardPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC04_verifyDashboardPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC05_viewQuealthReport(Pavan.goundla+2210@zenq.com, Pavan@123)">TC05_viewQuealthReport(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC04_verifyDashboardPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC04_verifyDashboardPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC06_verifyAssessmentPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC06_verifyAssessmentPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC05_viewQuealthReport(Pavan.goundla+2210@zenq.com, Pavan@123)">TC05_viewQuealthReport(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC07_verifyGoalsPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC07_verifyGoalsPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC06_verifyAssessmentPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC06_verifyAssessmentPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC08_verifyActivityPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC08_verifyActivityPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC07_verifyGoalsPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC07_verifyGoalsPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC09_verifyResourcesPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC09_verifyResourcesPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC08_verifyActivityPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC08_verifyActivityPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC10_createAGoal(Pavan.goundla+2210@zenq.com, Pavan@123)">TC10_createAGoal(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC09_verifyResourcesPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)">TC09_verifyResourcesPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC11_validateUserAccountSettings(Pavan.goundla+2210@zenq.com, Pavan@123)">TC11_validateUserAccountSettings(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC10_createAGoal(Pavan.goundla+2210@zenq.com, Pavan@123)">TC10_createAGoal(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" hash-for-method="TC12_validateUserAchievements(Pavan.goundla+2210@zenq.com, Pavan@123)">TC12_validateUserAchievements(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC11_validateUserAccountSettings(Pavan.goundla+2210@zenq.com, Pavan@123)">TC11_validateUserAccountSettings(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC12_validateUserAchievements(Pavan.goundla+2210@zenq.com, Pavan@123)">TC12_validateUserAchievements(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC15_UpdateEnergyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC15_UpdateEnergyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC16_UpdateFinancialAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC16_UpdateFinancialAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC17_UpdateDepressionAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC17_UpdateDepressionAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC18_UpdateAnxietyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC18_UpdateAnxietyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC19_UpdateAlcoholAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC19_UpdateAlcoholAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SeleniumJavaFramework.ReachHealthTests" class="method navigator-link" hash-for-method="TC20_UpdateMentalWellbeingAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">TC20_UpdateMentalWellbeingAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -193,83 +214,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">SeleniumJavaFramework.ReachHealthTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">
-                  </a> <!-- TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
-                  <span class="method-name">TC03_validateAllPageTabs</span>
-                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [https://demo.reachhealth.io/#/goals/create] but found [https://demo.reachhealth.io/#/goals]
-	at SeleniumJavaFramework.ReachHealthTests.TC03_validateAllPageTabs(ReachHealthTests.java:212)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 37 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
-                  </a> <!-- TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
-                  <span class="method-name">TC13_UpdateQuealthAssessmentWithPoorInputs</span>
-                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;text-small text-content-secondary&quot;&gt;...&lt;/span&gt; is not clickable at point (1068, 469). Other element would receive the click: &lt;circle class=&quot;fill-current&quot; cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;12&quot;&gt;&lt;/circle&gt;
-  (Session info: chrome=98.0.4758.82)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SYSR159&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\PAVAN~1.GOU\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54387}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e364054a8d26cd4ca8bb009acbbe2427
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.AssessmentsPage.answerModerateIntensityActivityQuestion(AssessmentsPage.java:85)
-	at SeleniumJavaFramework.ReachHealthTests.TC13_UpdateQuealthAssessmentWithPoorInputs(ReachHealthTests.java:767)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
-                  </a> <!-- TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
-                  <span class="method-name">TC14_UpdateQuealthAssessmentWithGoodInputs</span>
-                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=98.0.4758.82)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SYSR159&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\PAVAN~1.GOU\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54423}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1b510b96af0cfbede299d5a980203503
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at pageObjects.AssessmentsPage.answerVigorousIntensityActivityQuestion(AssessmentsPage.java:138)
-	at SeleniumJavaFramework.ReachHealthTests.TC14_UpdateQuealthAssessmentWithGoodInputs(ReachHealthTests.java:834)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -289,6 +233,14 @@ Session ID: 1b510b96af0cfbede299d5a980203503
                   <a name="TC02_loginToReachHealthWithInvalidCredentials">
                   </a> <!-- TC02_loginToReachHealthWithInvalidCredentials -->
                   <span class="method-name">TC02_loginToReachHealthWithInvalidCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC03_validateAllPageTabs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -363,6 +315,70 @@ Session ID: 1b510b96af0cfbede299d5a980203503
                   <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC13_UpdateQuealthAssessmentWithPoorInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC14_UpdateQuealthAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC15_UpdateEnergyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC15_UpdateEnergyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC15_UpdateEnergyAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC16_UpdateFinancialAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC16_UpdateFinancialAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC16_UpdateFinancialAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC17_UpdateDepressionAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC17_UpdateDepressionAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC17_UpdateDepressionAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC18_UpdateAnxietyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC18_UpdateAnxietyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC18_UpdateAnxietyAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC19_UpdateAlcoholAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC19_UpdateAlcoholAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC19_UpdateAlcoholAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC20_UpdateMentalWellbeingAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)">
+                  </a> <!-- TC20_UpdateMentalWellbeingAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123) -->
+                  <span class="method-name">TC20_UpdateMentalWellbeingAssessmentWithGoodInputs</span>
+                  <span class="parameters">(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -374,11 +390,11 @@ Session ID: 1b510b96af0cfbede299d5a980203503
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;SeleniumJavaFramework.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;SeleniumJavaFramework.ReachHealthTests&quot;/&gt;
     &lt;/classes&gt;
@@ -420,68 +436,92 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC10_createAGoal')
+data.setCell(0, 1, 'TC20_UpdateMentalWellbeingAssessmentWithGoodInputs')
 data.setCell(0, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(0, 3, 11864);
+data.setCell(0, 3, 26580);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC14_UpdateQuealthAssessmentWithGoodInputs')
+data.setCell(1, 1, 'TC15_UpdateEnergyAssessmentWithGoodInputs')
 data.setCell(1, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(1, 3, 10377);
+data.setCell(1, 3, 23798);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC13_UpdateQuealthAssessmentWithPoorInputs')
+data.setCell(2, 1, 'TC16_UpdateFinancialAssessmentWithGoodInputs')
 data.setCell(2, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(2, 3, 10059);
+data.setCell(2, 3, 23587);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC09_verifyResourcesPageSections')
+data.setCell(3, 1, 'TC19_UpdateAlcoholAssessmentWithGoodInputs')
 data.setCell(3, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(3, 3, 8665);
+data.setCell(3, 3, 22017);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC12_validateUserAchievements')
+data.setCell(4, 1, 'TC17_UpdateDepressionAssessmentWithGoodInputs')
 data.setCell(4, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(4, 3, 7802);
+data.setCell(4, 3, 21564);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC04_verifyDashboardPageSections')
+data.setCell(5, 1, 'TC14_UpdateQuealthAssessmentWithGoodInputs')
 data.setCell(5, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(5, 3, 7753);
+data.setCell(5, 3, 20272);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC03_validateAllPageTabs')
+data.setCell(6, 1, 'TC13_UpdateQuealthAssessmentWithPoorInputs')
 data.setCell(6, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(6, 3, 7557);
+data.setCell(6, 3, 19848);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC07_verifyGoalsPageSections')
+data.setCell(7, 1, 'TC18_UpdateAnxietyAssessmentWithGoodInputs')
 data.setCell(7, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(7, 3, 7430);
+data.setCell(7, 3, 18750);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC05_viewQuealthReport')
+data.setCell(8, 1, 'TC10_createAGoal')
 data.setCell(8, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(8, 3, 7411);
+data.setCell(8, 3, 11537);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC11_validateUserAccountSettings')
+data.setCell(9, 1, 'TC05_viewQuealthReport')
 data.setCell(9, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(9, 3, 7394);
+data.setCell(9, 3, 10000);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC01_loginToReachHealthWithValidCredentials')
+data.setCell(10, 1, 'TC09_verifyResourcesPageSections')
 data.setCell(10, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(10, 3, 7371);
+data.setCell(10, 3, 9917);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC08_verifyActivityPageSections')
+data.setCell(11, 1, 'TC12_validateUserAchievements')
 data.setCell(11, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(11, 3, 6453);
+data.setCell(11, 3, 9621);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC06_verifyAssessmentPageSections')
+data.setCell(12, 1, 'TC11_validateUserAccountSettings')
 data.setCell(12, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(12, 3, 6298);
+data.setCell(12, 3, 9346);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TC02_loginToReachHealthWithInvalidCredentials')
+data.setCell(13, 1, 'TC01_loginToReachHealthWithValidCredentials')
 data.setCell(13, 2, 'SeleniumJavaFramework.ReachHealthTests')
-data.setCell(13, 3, 1277);
+data.setCell(13, 3, 9286);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC03_validateAllPageTabs')
+data.setCell(14, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(14, 3, 9214);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'TC04_verifyDashboardPageSections')
+data.setCell(15, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(15, 3, 9205);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'TC06_verifyAssessmentPageSections')
+data.setCell(16, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(16, 3, 8525);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'TC07_verifyGoalsPageSections')
+data.setCell(17, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(17, 3, 8397);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TC08_verifyActivityPageSections')
+data.setCell(18, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(18, 3, 6356);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'TC02_loginToReachHealthWithInvalidCredentials')
+data.setCell(19, 2, 'SeleniumJavaFramework.ReachHealthTests')
+data.setCell(19, 3, 1203);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -514,173 +554,239 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_loginToReachHealthWithValidCredentials(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">11190 ms</span>
+                <span class="method-start">6708 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18573 ms</span>
+                <span class="method-start">16006 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">22795 ms</span>
+                <span class="method-start">20246 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_loginToReachHealthWithInvalidCredentials</span>
-                <span class="method-start">29395 ms</span>
+                <span class="method-start">25433 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">30673 ms</span>
+                <span class="method-start">26637 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30895 ms</span>
+                <span class="method-start">30800 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC03_validateAllPageTabs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">37344 ms</span>
+                <span class="method-start">35573 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">45261 ms</span>
+                <span class="method-start">44788 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">45560 ms</span>
+                <span class="method-start">49027 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC04_verifyDashboardPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">50783 ms</span>
+                <span class="method-start">53337 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">58536 ms</span>
+                <span class="method-start">62543 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">62719 ms</span>
+                <span class="method-start">62766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC05_viewQuealthReport(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">68361 ms</span>
+                <span class="method-start">67400 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">75773 ms</span>
+                <span class="method-start">77401 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">79970 ms</span>
+                <span class="method-start">77809 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC06_verifyAssessmentPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">85673 ms</span>
+                <span class="method-start">83165 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">91972 ms</span>
+                <span class="method-start">91691 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">96164 ms</span>
+                <span class="method-start">91971 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC07_verifyGoalsPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">101323 ms</span>
+                <span class="method-start">96565 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">108754 ms</span>
+                <span class="method-start">104962 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">108966 ms</span>
+                <span class="method-start">105154 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC08_verifyActivityPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">117019 ms</span>
+                <span class="method-start">109459 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">123473 ms</span>
+                <span class="method-start">115815 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">127684 ms</span>
+                <span class="method-start">116047 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC09_verifyResourcesPageSections(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">133496 ms</span>
+                <span class="method-start">121143 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">142162 ms</span>
+                <span class="method-start">131060 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">142373 ms</span>
+                <span class="method-start">135272 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC10_createAGoal(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">149845 ms</span>
+                <span class="method-start">140023 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">161710 ms</span>
+                <span class="method-start">151561 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">165901 ms</span>
+                <span class="method-start">155727 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC11_validateUserAccountSettings(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">170880 ms</span>
+                <span class="method-start">160874 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">178274 ms</span>
+                <span class="method-start">170221 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">182474 ms</span>
+                <span class="method-start">174442 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC12_validateUserAchievements(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">187945 ms</span>
+                <span class="method-start">179909 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">195747 ms</span>
+                <span class="method-start">189531 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">195945 ms</span>
+                <span class="method-start">193750 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC13_UpdateQuealthAssessmentWithPoorInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">201391 ms</span>
+                <span class="method-start">198509 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">211597 ms</span>
+                <span class="method-start">218358 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">215758 ms</span>
+                <span class="method-start">222535 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC14_UpdateQuealthAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
-                <span class="method-start">221171 ms</span>
+                <span class="method-start">228425 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">231748 ms</span>
+                <span class="method-start">248698 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">252896 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC15_UpdateEnergyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">257374 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">281172 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">285348 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC16_UpdateFinancialAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">290245 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">313832 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">318029 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC17_UpdateDepressionAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">322479 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">344043 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">348246 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC18_UpdateAnxietyAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">353118 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">371868 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">376059 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC19_UpdateAlcoholAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">380692 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">402710 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">406887 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC20_UpdateMentalWellbeingAssessmentWithGoodInputs(Pavan.goundla+2210@zenq.com, Pavan@123)</span>
+                <span class="method-start">411880 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">438461 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
