@@ -5,7 +5,7 @@
     <classes>
       <class name="SeleniumJavaFramework.ReachHealthTests">
         <methods>
-          <include name="TC14_UpdateQuealthAssessmentWithGoodInputs" invocation-numbers="0"/>
+          <include name="TC13_UpdateQuealthAssessmentWithPoorInputs" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

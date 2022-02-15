@@ -62,27 +62,17 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 		driver.findElement(By.xpath(String.format("//div[@title='%s']", enterAssessmentName))).click();
 	}
 	
-     public void verifyQuestionText(String questionName) {
+     public String verifyQuestionText(String questionName) {
     	 waitUntilElementIsVisible(20, By.xpath(String.format("//h2[contains(text(),'%s')]", questionName)));
     	 String question = driver
  				.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", questionName))).getText();
  		Assert.assertEquals(question, questionName,
  				questionName + "Not Message displayed");
+ 		
+ 		return question;
      }
 
-	public void answerHowMuchDoYouWeighQueation(String enterWeightQuestionText, String enterWeightInKgs) {
-		waitUntilElementIsVisible(10, By.xpath(String.format("//h2[contains(text(),'%s')]", enterWeightQuestionText)));
-		String weightQuestionText = driver
-				.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", enterWeightQuestionText))).getText();
-		//Assert.assertEquals(weightQuestionText, enterWeightQuestionText,
-				//enterWeightQuestionText + "Not Message displayed");
-		Assert.assertEquals(weightQuestionText, enterWeightQuestionText);
-		waitUntilElementIsVisible(10, WEIGHT_INPUT);
-		driver.findElement(WEIGHT_INPUT).click();
-		driver.findElement(WEIGHT_INPUT).sendKeys(Keys.BACK_SPACE);
-		driver.findElement(WEIGHT_INPUT).sendKeys(enterWeightInKgs);
-		driver.findElement(NEXT_BUTTON).click();
-	}
+	
 
 	public void answerModerateIntensityActivityQuestion(String doYouPerformMinutesOfModerateIntensity,
 			String enterYesOrNo, String howManyMinutesOfModerateIntensity,
@@ -210,13 +200,48 @@ public class AssessmentsPage implements AssessmentsPageLocators {
 		}
 	}
 	
+	public void answerHowMuchDoYouWeighQueation(String enterWeightQuestionText, String enterWeightInKgs) {
+		waitUntilElementIsVisible(10, By.xpath(String.format("//h2[contains(text(),'%s')]", enterWeightQuestionText)));
+		String weightQuestionText = driver
+				.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", enterWeightQuestionText))).getText();
+		//Assert.assertEquals(weightQuestionText, enterWeightQuestionText,
+				//enterWeightQuestionText + "Not Message displayed");
+		Assert.assertEquals(weightQuestionText, enterWeightQuestionText);
+		waitUntilElementIsVisible(10, WEIGHT_INPUT);
+		driver.findElement(WEIGHT_INPUT).click();
+		driver.findElement(WEIGHT_INPUT).sendKeys(Keys.BACK_SPACE);
+		driver.findElement(WEIGHT_INPUT).sendKeys(enterWeightInKgs);
+		driver.findElement(NEXT_BUTTON).click();
+	}
+	
 	public void answerOptionTypeQuestion(String enterQuestionName, String enterOption) {
-		verifyQuestionText(enterQuestionName);
+		 waitUntilElementIsVisible(20, By.xpath(String.format("//h2[contains(text(),'%s')]", enterQuestionName)));
+    	 String question = driver
+ 				.findElement(By.xpath(String.format("//h2[contains(text(),'%s')]", enterQuestionName))).getText();
+ 		Assert.assertEquals(question, enterQuestionName,
+ 				enterQuestionName + "Not Message displayed");
+		if(question.equals("How much do you weigh?")) {
+			Actions e = new Actions(driver);
+			WebElement element = driver.findElement(WEIGHT_INPUT);
+			e.moveToElement(element).doubleClick().perform();
+			driver.findElement(WEIGHT_INPUT).sendKeys(Keys.BACK_SPACE);
+			driver.findElement(WEIGHT_INPUT).sendKeys(enterOption);
+			driver.findElement(NEXT_BUTTON).click();
+		}
+		else if(question.equals("How many cigarettes a day do you generally smoke?")) {
+			Actions e = new Actions(driver);
+			WebElement element = driver.findElement(SMOKE_INPUT);
+			e.moveToElement(element).doubleClick().perform();
+			driver.findElement(SMOKE_INPUT).sendKeys(Keys.BACK_SPACE);
+			driver.findElement(SMOKE_INPUT).sendKeys(enterOption);
+			driver.findElement(NEXT_BUTTON).click();
+		}
+		else {
 			waitUntilElementIsVisible(30,
 					By.xpath(String.format("//div[@aria-label='%s']//span[contains(text(),'%s')]", enterQuestionName, enterOption)));
 			driver.findElement(
 				By.xpath(String.format("//div[@aria-label='%s']//span[contains(text(),'%s')]", enterQuestionName, enterOption))).click();	
-		
+		}
 	}
 
 	public void verifyAssessmentScore(String enterQuealthScoreText) {

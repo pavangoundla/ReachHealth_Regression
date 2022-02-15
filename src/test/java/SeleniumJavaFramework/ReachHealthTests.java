@@ -763,16 +763,13 @@ public class ReachHealthTests extends BaseClass {
 
 		AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
 		assessmentsPage.clickOnAssessmentPageButton();
-		assessmentsPage.answerHowMuchDoYouWeighQueation("How much do you weigh?", "90");
-		assessmentsPage.answerModerateIntensityActivityQuestion(
-				"Do you know how many minutes of moderate intensity activity you generally carry out each week?", "No",
-				"", "", "In general, how many days a week do you carry out some moderate activity?", "0 days");
-		assessmentsPage.answerVigorousIntensityActivityQuestion(
-				"Do you know how many minutes of vigorous intensity activity you generally carry out each week?", "No",
-				"", "", "In general, how many days a week do you carry out some vigorous activity?", "0 days");
-		assessmentsPage.answerSmokeQuestion("Do you smoke cigarettes on a daily basis?", "Yes",
-				"How many cigarettes a day do you generally smoke?", "30", "", "");
-		
+		assessmentsPage.answerOptionTypeQuestion("How much do you weigh?", "90");
+		assessmentsPage.answerOptionTypeQuestion("Do you know how many minutes of moderate intensity activity you generally carry out each week?", "No");
+		assessmentsPage.answerOptionTypeQuestion("In general, how many days a week do you carry out some moderate activity?", "0 days");
+		assessmentsPage.answerOptionTypeQuestion("Do you know how many minutes of vigorous intensity activity you generally carry out each week?", "No");
+		assessmentsPage.answerOptionTypeQuestion("In general, how many days a week do you carry out some vigorous activity?", "0 days");
+		assessmentsPage.answerOptionTypeQuestion("Do you smoke cigarettes on a daily basis?", "Yes");
+		assessmentsPage.answerOptionTypeQuestion("How many cigarettes a day do you generally smoke?", "30");
 		assessmentsPage.verifyAssessmentScore("Your Quealth score is 1");
 	}
 
@@ -831,7 +828,7 @@ public class ReachHealthTests extends BaseClass {
 
 		AssessmentsPage assessmentsPage = new AssessmentsPage(driver);
 		assessmentsPage.clickOnAssessmentPageButton();
-		assessmentsPage.answerHowMuchDoYouWeighQueation("How much do you weigh?", "60");
+		assessmentsPage.answerOptionTypeQuestion("How much do you weigh?", "60");
 		assessmentsPage.answerModerateIntensityActivityQuestion(
 				"Do you know how many minutes of moderate intensity activity you generally carry out each week?", "Yes",
 				"How many minutes of moderate intensity activity do you generally carry out each week?", "150", "", "");
